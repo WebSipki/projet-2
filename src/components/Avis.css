@@ -1,0 +1,72 @@
+.avis {
+  padding: 80px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.avis-title {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #222;
+  font-weight: bold;
+  position: relative;
+}
+
+.avis-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #ff9800;
+  margin: 15px auto 0;
+  border-radius: 2px;
+}
+
+.avis-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.avis-card {
+  background: #f9f9f9;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.avis-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.avis-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.avis-photo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ff9800;
+}
+
+.avis-card h3 {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.avis-card p {
+  font-size: 1rem;
+  color: #555;
+  font-style: italic;
+  line-height: 1.6;
+}

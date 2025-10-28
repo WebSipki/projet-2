@@ -1,0 +1,70 @@
+/* Reset et styles de base */
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+--brand:#004080;
+--accent:#ff6600;
+--muted:#f5f5f5;
+--text:#222;
+}
+body{font-family:Inter, Roboto, system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial; color:var(--text); line-height:1.5}
+.container{width:90%;max-width:1200px;margin:0 auto}
+
+
+/* Header */
+header{background:var(--brand);color:#fff;padding:14px 0;position:sticky;top:0;z-index:40}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:700;font-size:1.25rem}
+nav ul{display:flex;gap:16px;list-style:none}
+nav a{color:#fff;text-decoration:none}
+.btn-header{background:var(--accent);color:#fff;padding:8px 12px;border-radius:6px;text-decoration:none}
+
+
+/* Hero */
+.hero{min-height:60vh;background-image:url('/img/hero.jpg');background-size:cover;background-position:center;display:flex;align-items:center;color:#fff}
+.hero .hero-inner{background:linear-gradient(90deg, rgba(0,0,0,0.45), rgba(0,0,0,0.15));padding:40px;border-radius:12px}
+.hero h1{font-size:2rem;margin-bottom:8px}
+.hero p{opacity:0.95}
+.btn-primary{background:var(--accent);color:#fff;padding:10px 18px;border-radius:8px;border:none;cursor:pointer;text-decoration:none;display:inline-block;margin-top:12px}
+
+
+section{padding:64px 0}
+h2{text-align:center;color:var(--brand);margin-bottom:28px}
+
+
+/* Cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{background:var(--muted);padding:18px;border-radius:10px;text-align:center}
+.card img{width:100%;height:140px;object-fit:cover;border-radius:8px;margin-bottom:10px}
+
+
+/* Gallery */
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.gallery img{width:100%;height:180px;object-fit:cover;border-radius:8px}
+
+
+/* Testimonials */
+.testimonials{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.testimonial{background:var(--muted);padding:18px;border-radius:10px;width:320px}
+
+
+/* Logos */
+.logos{display:flex;flex-wrap:wrap;gap:18px;justify-content:center;align-items:center}
+.logos img{height:56px;object-fit:contain}
+
+
+/* Form */
+form{max-width:650px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+input,textarea,select{padding:10px;border:1px solid #ddd;border-radius:8px}
+textarea{min-height:120px}
+button[type="submit"]{background:var(--brand);color:#fff;padding:10px 14px;border-radius:8px;border:none;cursor:pointer}
+
+
+/* Footer */
+footer{background:var(--brand);color:#fff;padding:24px 0;text-align:center}
+
+
+/* Responsive */
+@media (max-width:720px){
+.hero h1{font-size:1.4rem}
+nav ul{display:none}
+}

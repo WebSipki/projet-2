@@ -1,0 +1,70 @@
+.hero {
+  height: 80vh;
+  background: url("../assets/chantier.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 150px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55); /* overlay sombre */
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  max-width: 700px;
+  padding: 20px;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  animation: fadeSlide 2s ease-out forwards; /* une fois */
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  animation: fadeSlide 3s ease-out forwards;
+}
+
+.hero-btn {
+  background: #ff9800;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+  animation: fadeSlide 4s ease-out forwards;
+}
+
+.hero-btn:hover {
+  background: #e68900;
+}
+
+/* Animation */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
